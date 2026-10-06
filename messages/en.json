@@ -1,0 +1,239 @@
+{
+    "Header": {
+        "nav": {
+            "Home": "Home",
+            "Solutions": "Solutions",
+            "Services": "Services",
+            "Projects": "Projects",
+            "Safety": "Safety",
+            "Contact": "Contact"
+        },
+        "buttonLabel": "Emergency Repair"
+    },
+    "HeroSection": {
+        "tag": "Industrial Safety Certified",
+        "title": "Engineering Automatic Doors For Heavy Industry",
+        "description": "High-performance structural entry systems designed for extreme durability, relentless operation, and uncompromising safety in demanding environments."
+    },
+    "QuoteForm": {
+        "title": "Request For Quote",
+        "fields": {
+            "toast": {
+                "Success": "Request sent successfully.",
+                "Error": "Something went wrong. Please try again."
+            },
+            "fullName": {
+                "Label": "Full Name",
+                "Placeholder": "Enter your name",
+                "Messages": {
+                    "min": "Full name must be at least 2 characters.",
+                    "max": "Full name must not exceed 50 characters."
+                }
+            },
+            "emailAddress": {
+                "Label": "Email Address",
+                "Messages": "Email address is required."
+            },
+            "systemRequirements": {
+                "Label": "System Requirements",
+                "Placeholder": "Choose a System Requirement...",
+                "Messages": "Please select a system requirement option."
+            }
+        },
+        "buttonLabel": "Submit Request"
+    },
+    "directpurchase": {
+        "header": {
+            "tag": "Enterprise Solutions",
+            "title": "Direct Purchase: Complete Industrial Door Systems"
+        },
+        "products": {
+            "product1": {
+                "title": "Heavy-Duty Sliding Door",
+                "description": "Structural integrity for maximum width access"
+            },
+            "product2": {
+                "title": "Heavy-Duty Sliding Door",
+                "description": "Structural integrity for maximum width access"
+            },
+            "product3": {
+                "title": "Heavy-Duty Sliding Door",
+                "description": "Structural integrity for maximum width access"
+            },
+            "product4": {
+                "title": "Heavy-Duty Sliding Door",
+                "description": "Structural integrity for maximum width access"
+            }
+        },
+        "productCard": {
+            "buttonLabel": "Configure & Add"
+        },
+        "shopButton": "Shop All"
+    },
+    "industryauthority": {
+        "header": {
+            "tag": "Industry Authority",
+            "title": "Engineering Critical Infrastructure",
+            "description": "We don't just build doors; we engineer critical infrastructure. For over two decades, International EAS has been the structural backbone for manufacturing plants, aerospace hangars, and logistics hubs demanding absolute reliability."
+        },
+        "companyAttribute": {
+            "attribute1": {
+                "title": "ISO 9001 Certified Manufacturing Process"
+            },
+            "attribute2": {
+                "title": "Custom Structural Engineering per Project"
+            },
+            "attribute3": {
+                "title": "24/7 Global Maintenance & Support Network"
+            }
+        },
+        "viewButton": {
+            "buttonLabel": "View Corporate Profile"
+        },
+        "experience": {
+            "number": "20+",
+            "text1": "Years",
+            "text2": "Experience"
+        }
+    },
+    "technicalgrid": {
+        "header": {
+            "tag": "Specifications",
+            "title": "Technical Grid",
+            "description": "Advanced structural specifications engineered for high-demand industrial environments."
+        },
+        "specificationData": {
+            "spec1": {
+                "title": "Smart Controllers",
+                "description": "Programmable logic controllers with real-time diagnostic telemetry and remote monitoring capabilities."
+            },
+            "spec2": {
+                "title": "Variable Frequency",
+                "description": "VFD drives for smooth acceleration, deceleration, and extended mechanical longevity."
+            },
+            "spec3": {
+                "title": "Armor Plating",
+                "description": "Heavy-gauge steel reinforcement for high-risk impact zone protection and structural integrity."
+            },
+            "spec4": {
+                "title": "Thermal Seals",
+                "description": "High-grade weatherstripping for extreme climate compartmentalization and energy efficiency."
+            }
+        }
+    },
+    "latestprojects": {
+        "header": {
+            "tag": "Proven Performance",
+            "title": "Latest Projects",
+            "viewAll": "View All"
+        },
+        "projectCard": {
+            "card1": {
+                "title": "Sector 7 Facility",
+                "category": "Logistics Hub"
+            },
+            "card2": {
+                "title": "BioTech Labs",
+                "category": "Clean Room"
+            },
+            "card3": {
+                "title": "Hangar Alpha",
+                "category": "Aerospace"
+            },
+            "card4": {
+                "title": "Automotive Plant",
+                "category": "Manufacturing"
+            }
+        },
+        "testimonialCard": {
+            "header": {
+                "tag": "What Clients Say",
+                "title": "Trust In Engineering"
+            },
+            "content": "International EAS delivered structural integrity that exceeded our stringent safety requirements. Their heavy-duty rolling doors operate flawlessly even under the highest operational tempo of our distribution center.",
+            "author": {
+                "shortCut": "mc",
+                "name": "Marcus Cole",
+                "position": "Operations Director, Apex Logistics"
+            }
+        }
+    },
+    "questions": {
+        "header": "Frequently Asked Questions",
+        "items": {
+            "item1": {
+                "trigger": "What is your typical lead time?",
+                "content": "Standard industrial installations typically require 4-6 weeks for fabrication and deployment, depending on structural customization needs."
+            },
+            "item2": {
+                "trigger": "Do you provide international shipping?",
+                "content": "Control your privacy settings and security preferences. Enable two-factor authentication, manage connected devices, review active sessions, and configure data sharing preferences. You can also download your data or delete your account."
+            },
+            "item3": {
+                "trigger": "Are maintenance contracts mandatory?",
+                "content": "View your current plan, payment history, and upcoming invoices. Update your payment method, change your subscription tier, or cancel your subscription."
+            },
+            "item4": {
+                "trigger": "What safety certifications do you meet?",
+                "content": "View your current plan, payment history, and upcoming invoices. Update your payment method, change your subscription tier, or cancel your subscription."
+            }
+        },
+        "card": {
+            "title": "24/7 Global Maintenance & Emergency Support",
+            "content": {
+                "description": "Rapid dispatch for critical infrastructure failures worldwide.",
+                "sheetLabel": "Dispatch Technician"
+            }
+        }
+    },
+    "footer": {
+        "description": "Engineering automatic door solutions for heavy industry. Absolute reliability, structural integrity, and uncompromising safety.",
+        "footerLinks": {
+            "company": {
+                "title": "company",
+                "links": {
+                    "link1": {
+                        "title": "Complete Systems"
+                    },
+                    "link2": {
+                        "title": "Safety Compliance"
+                    },
+                    "link3": {
+                        "title": "Maintenance Plans"
+                    },
+                    "link4": {
+                        "title": "Case Studies"
+                    }
+                }
+            },
+            "legal": {
+                "title": "Legal",
+                "links": {
+                    "link1": {
+                        "title": "Privacy Policy"
+                    },
+                    "link2": {
+                        "title": "Terms of Service"
+                    },
+                    "link3": {
+                        "title": "Warranty Info"
+                    }
+                }
+            }
+        },
+        "newsletterform": {
+            "title": "Technical Updates",
+            "description": "Subscribe for engineering briefs and safety protocol updates.",
+            "emailAddress": {
+                "placeholder": "Email Address",
+                "invalidMessage": "Please enter a valid email address.",
+                "minEmailAddress": "Email address is required"
+            }
+        },
+        "bottomSection": {
+            "copyright": "© 2026 International EAS. All Rights Reserved.",
+            "author": "by Ahmed Khedr",
+            "tagLine": "Engineering the Future of Access."
+        }
+    }
+}
