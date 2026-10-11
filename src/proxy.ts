@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 
 const handleI18nRouting = createMiddleware(routing);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     return (handleI18nRouting(request));
 };
 
