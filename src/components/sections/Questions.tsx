@@ -3,8 +3,8 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { EngineeringIcon } from "../ui/EngineeringIcon";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import QuoteForm from "../forms/QuoteForm";
 import { useTranslations } from "next-intl";
+import QuickInquiryForm from "@/features/inquiries/components/quick-inquiry-form";
 
 export default function Questions() {
 
@@ -79,7 +79,7 @@ export default function Questions() {
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="flex justify-center">
-                                <QuoteForm />
+                                <QuickInquiryForm />
                             </SheetContent>
                         </Sheet>
                     </CardContent>

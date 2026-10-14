@@ -6,13 +6,11 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import Link from "next/link";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { usePathname } from "next/navigation";
-import LogoSvg from "../ui/LogoSvg";
+// import LogoSvg from "../ui/LogoSvg";
 import TopHeader from "./TopHeader";
 import { useTranslations } from "next-intl";
 
 export default function Header() {
-
-    // add a redux store to hold the site language
 
     const pathName = usePathname();
 
@@ -49,11 +47,17 @@ export default function Header() {
         <header className="sticky top-0 z-50 flex flex-col items-center justify-between w-full text-white border-b MainNav bg-brand-secondary">
             <TopHeader />
             <div className="container flex items-center justify-between w-full px-4 mx-auto my-1 max-w-7xl md:px-10">
-                {/* <div className="brand">
-                    <Link href={"/"} className="flex items-center justify-start w-fit h-fit">
-                        <LogoSvg className="p-0! m-0! w-23! h-23! sm:size-18 " borderFill={"text-brand-primary"} textFill={"text-brand-tertiary"} />
+                <div className="brand">
+                    {/* <Link href={"/"} className="flex items-center justify-start w-fit h-fit"> */}
+                    <Link href={"/"} className="flex items-center justify-start w-23 h-23">
+                        <span
+                            className="text-3xl font-black tracking-tight uppercase text-brand-tertiary"
+                        >
+                            PlaceHolder
+                        </span>
+                        {/* <LogoSvg className="p-0! m-0! w-23! h-23! sm:size-18 " borderFill={"text-brand-primary"} textFill={"text-brand-tertiary"} /> */}
                     </Link>
-                </div> */}
+                </div>
                 <div className="hidden nav bg-brand-secondary lg:flex lg:gap-2 ">
                     {navLinks.map((link) =>
                         <Link key={link.name} href={link.path} className={`uppercase hover:text-brand-primary transition-all duration-200 ease-in-out px-2.5 py-1.5 text-md font-medium 

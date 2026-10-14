@@ -15,30 +15,56 @@
         "title": "Engineering Automatic Doors For Heavy Industry",
         "description": "High-performance structural entry systems designed for extreme durability, relentless operation, and uncompromising safety in demanding environments."
     },
-    "QuoteForm": {
+    "InquiryForm": {
         "title": "Request For Quote",
-        "fields": {
-            "toast": {
-                "Success": "Request sent successfully.",
-                "Error": "Something went wrong. Please try again."
-            },
+        "normalFields": {
             "fullName": {
-                "Label": "Full Name",
-                "Placeholder": "Enter your name",
-                "Messages": {
-                    "min": "Full name must be at least 2 characters.",
-                    "max": "Full name must not exceed 50 characters."
+                "label": "Full Name",
+                "placeholder": "Enter your full name",
+                "errors": {
+                    "too_small": "Full name must be at least 2 characters.",
+                    "too_big": "Full name must not exceed 50 characters."
+                }
+            },
+            "phoneNumber": {
+                "label": "Phone Number",
+                "placeholder": "01-xxx-xxx-xxxx",
+                "errors": {
+                    "invalid_string": "Please enter a valid phone number.",
+                    "invalid_format": "Please enter a valid phone number.",
+                    "too_small": "Phone number is required",
+                    "too_big": "Phone number is too long"
                 }
             },
             "emailAddress": {
-                "Label": "Email Address",
-                "Messages": "Email address is required."
-            },
-            "systemRequirements": {
-                "Label": "System Requirements",
-                "Placeholder": "Choose a System Requirement...",
-                "Messages": "Please select a system requirement option."
+                "label": "Email Address",
+                "placeholder": "example@example.com",
+                "errors": {
+                    "invalid_string": "Invalid email address format.",
+                    "invalid_format": "Invalid email address format.",
+                    "too_small": "Email is required.",
+                    "too_big": "Email is too long."
+                }
             }
+        },
+        "selectFields": {
+            "systemRequirements": {
+                "label": "System Requirements",
+                "placeholder": "Choose a System Requirement...",
+                "errors": {
+                    "invalid_value": "Please select a system requirement option."
+                },
+                "options": {
+                    "heavy-duty-sliding": "Heavy-Duty Sliding",
+                    "high-speed-roll-up": "High-Speed Roll-up",
+                    "thermal-clean-room": "Thermal Clean-Room",
+                    "crash-proof-warehouse": "Crash-Proof WareHouse"
+                }
+            }
+        },
+        "toast": {
+            "success": "Request sent successfully.",
+            "error": "Something went wrong. Please try again."
         },
         "buttonLabel": "Submit Request"
     },
