@@ -1,8 +1,8 @@
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import QuoteForm from "../forms/QuoteForm";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { useTranslations } from "next-intl";
+import HeroForm from "@/features/inquiries/components/quick-inquiry-form";
 
 export interface products {
   id: number;
@@ -38,16 +38,17 @@ export default function ProductCard({ props }: ProductProps) {
           </div>
         </CardDescription>
 
-        <Sheet>
+        {/* This will be linked to the cart-inquiry-form.tsx */}
+        {/* <Sheet>
           <SheetTrigger asChild>
             <Button className="w-full text-sm font-bold tracking-wider uppercase transition-transform duration-200 ease-in-out rounded-sm text-brand-tertiary bg-brand-primary py-7 hover:bg-brand-primary hover:-translate-y-1 hover:brightness-90">
               {t("productCard.buttonLabel")}
             </Button>
           </SheetTrigger>
           <SheetContent className="flex justify-centerw-full h-full px-8 py-10 bg-white border-none rounded-lg shadow-2xl outline-none text-brand-secondary lg:max-w-lg sm:py-12 sm:px-10">
-            <QuoteForm />
+            <HeroForm />
           </SheetContent>
-        </Sheet>
+        </Sheet> */}
       </CardHeader>
     </Card>
   );

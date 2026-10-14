@@ -15,30 +15,56 @@
         "title": "هندسة الأبواب الأوتوماتيكية للصناعات الثقيلة",
         "description": "أنظمة دخول هيكلية عالية الأداء مصممة للمتانة والتشغيل المستمر والسلامة التي لا هوادة فيها في البيئات القاسية."
     },
-    "QuoteForm": {
+    "InquiryForm": {
         "title": "طلب عرض سعر",
-        "fields": {
-            "toast": {
-                "Success": "تم إرسال طلبك بنجاح",
-                "Error": "حدث خطأ في إرسال طلبك"
-            },
+        "normalFields": {
             "fullName": {
-                "Label": "الاسم بالكامل",
-                "Placeholder": "اكتب اسمك بالكامل",
-                "Messages": {
-                    "min": "الاسم لا يقل عن حرفين",
-                    "max": "الاسم لا يزيد عن 50 حرف"
+                "label": "الاسم بالكامل",
+                "placeholder": "اكتب اسمك بالكامل",
+                "errors": {
+                    "too_small": "الاسم لا يقل عن حرفين",
+                    "too_big": "الاسم لا يزيد عن 50 حرف"
+                }
+            },
+            "phoneNumber": {
+                "label": "رقم الهاتف",
+                "placeholder": "01-xxx-xxx-xxxx",
+                "errors": {
+                    "invalid_string": "برجاء إدخال رقم هاتف صحيح.",
+                    "invalid_format": "برجاء إدخال رقم هاتف صحيح.",
+                    "too_small": "رقم الهاتف مطلوب.",
+                    "too_big": "رقم الهاتف طويل جداً."
                 }
             },
             "emailAddress": {
-                "Label": "البريد الالكتروني",
-                "Message": "البريد الالكتروني مطلوب"
-            },
-            "systemRequirements": {
-                "Label": "متطلبات النظام",
-                "Placeholder": "اختر متطلبات النظام",
-                "Message": "متطلبات النظام مطلوبة"
+                "label": "البريد الالكتروني",
+                "placeholder": "example@example.com",
+                "errors": {
+                    "invalid_string": "صيغة البريد الإلكتروني غير صحيحة.",
+                    "invalid_format": "صيغة البريد الإلكتروني غير صحيحة.",
+                    "too_small": "البريد الإلكتروني مطلوب.",
+                    "too_big": "البريد الإلكتروني طويل جداً."
+                }
             }
+        },
+        "selectFields": {
+            "systemRequirements": {
+                "label": "متطلبات النظام",
+                "placeholder": "اختر متطلبات النظام...",
+                "errors": {
+                    "invalid_value": "متطلبات النظام مطلوبة"
+                },
+                "options": {
+                    "heavy-duty-sliding": "أبواب منزلقة للمهام الشاقة",
+                    "high-speed-roll-up": "أبواب رول سريعة",
+                    "thermal-clean-room": "أبواب الغرف النظيفة المعزولة",
+                    "crash-proof-warehouse": "أبواب مستودعات مضادة للاصطدام"
+                }
+            }
+        },
+        "toast": {
+            "success": "تم إرسال طلبك بنجاح",
+            "error": "حدث خطأ في إرسال طلبك"
         },
         "buttonLabel": "تقديم الطلب"
     },

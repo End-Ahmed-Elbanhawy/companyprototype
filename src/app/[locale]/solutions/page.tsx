@@ -5,6 +5,12 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function SolutionPage() {
+
+
+    // add a redux store to hold the Cart items. So they are sent to the cart page.
+
+    
+
     const t = useTranslations("directpurchase");
 
     const ProductData: products[] = [

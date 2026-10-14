@@ -40,8 +40,8 @@ const cairo = Cairo({
 // };
 
 export const metadata: Metadata = {
-  title: "International EAS",
-  description: "Engineering Automatic Doors For Heavy Industry",
+  title: "Company Prototype",
+  description: "Placeholder",
 };
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });

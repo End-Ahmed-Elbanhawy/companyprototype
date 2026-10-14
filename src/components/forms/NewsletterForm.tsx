@@ -26,7 +26,7 @@ function useNewsletterFormLogic() {
         },
     });
     function handleSubmit(values: z.infer<typeof formSchema>) {
-        console.log("Form Succefully validated and submitted :", values);
+        console.log("Form Successfully validated and submitted :", values);
     };
     return { form, handleSubmit }
 }
@@ -48,7 +48,7 @@ export default function NewsletterForm() {
                 <Input
                     id="emailAddress"
                     placeholder={t("emailAddress.placeholder")}
-                    className="w-full px-5 placeholder-gray-500 border rounded-r-none outline-none border-white/10 bg-white/5 text-brand-tertiary py-7 rounded-l-xs focus:border-brand-primary focus:ring-0 me-0"
+                    className="w-full px-5 placeholder-gray-500 border outline-none rounded-s-none border-white/10 bg-white/5 text-brand-tertiary py-7 rounded-e-xs focus:border-brand-primary focus:ring-0 me-0"
                     aria-invalid={!!form.formState.errors.emailAddress}
                     {...form.register("emailAddress")}
 
@@ -59,7 +59,7 @@ export default function NewsletterForm() {
                     </FieldError>
                 )}
             </Field>
-            <Button type="submit" className="bg-brand-primary text-brand-tertiary px-5 py-[1.78rem] rounded-r-xs rounded-l-none hover:bg-brand-primary hover:brightness-90 transition-all font-bold duration-200 ms-0 ease-in-out">
+            <Button type="submit" className="bg-brand-primary text-brand-tertiary px-5 py-[1.78rem] rounded-s-xs rounded-e-none hover:bg-brand-primary hover:brightness-90 transition-all font-bold duration-200 ms-0 ease-in-out">
                 <SendHorizontal className="size-6" strokeWidth={3} />
             </Button>
         </form>

@@ -54,9 +54,12 @@ export default function Footer() {
             <div className="container grid items-start grid-cols-1 gap-10 px-4 pb-16 mx-auto max-w-7xl md:px-10 md:grid-cols-2 lg:grid-cols-6">
                 <div className="flex flex-col gap-6 lg:col-span-2">
                     <h2>
-                        {/* <Link href={"/"} className="text-3xl font-black tracking-tight uppercase text-brand-tertiary">
-                            <LogoSvg className="w-fit size-30" borderFill={"text-brand-primary"} textFill={"text-brand-tertiary"} />
-                        </Link> */}
+                        <Link href={"/"} className="text-3xl font-black tracking-tight uppercase text-brand-tertiary">
+                            {/* <LogoSvg className="w-fit size-30" borderFill={"text-brand-primary"} textFill={"text-brand-tertiary"} /> */}
+                            <span>
+                                PlaceHolder
+                            </span>
+                        </Link>
                     </h2>
                     <p className="text-gray-400 text-[16px] leading-relaxed">
                         {t("description")}
