@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 
 export default function Latestprojects() {
 
-    const t = useTranslations("latestprojects");
+    const t = useTranslations("home.latestProjects");
 
     const isArabic = usePathname().startsWith("/ar");
 

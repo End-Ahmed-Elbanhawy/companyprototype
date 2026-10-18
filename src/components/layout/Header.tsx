@@ -14,7 +14,7 @@ export default function Header() {
 
     const pathName = usePathname();
 
-    const t = useTranslations("Header")
+    const t = useTranslations("header")
 
     const navLinks = [
         {

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 export default function Technicalgrid() {
 
-    const t = useTranslations("technicalgrid")
+    const t = useTranslations("home.technicalGrid")
 
     const specifications: SpecificationData[] = [
         {

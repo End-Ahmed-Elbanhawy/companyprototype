@@ -100,10 +100,10 @@ export default function Footer() {
                 })}
                 <div className="flex flex-col items-start gap-5 lg:col-span-2">
                     <h3 className="pl-3 mb-2 text-sm font-bold tracking-widest text-white uppercase border-l-2 border-brand-primary">
-                        {t("newsletterform.title")}
+                        {t("newsLetterForm.title")}
                     </h3>
                     <p className="text-gray-400  text-[16px] leading-6">
-                        {t("newsletterform.description")}
+                        {t("newsletterForm.description")}
                     </p>
                     <div className="w-full">
                         <NewsletterForm />

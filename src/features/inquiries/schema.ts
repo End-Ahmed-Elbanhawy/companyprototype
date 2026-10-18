@@ -48,3 +48,14 @@ export const quickFormSchema = inquiryFormSchema.extend({
 
 export type InquiryFormValues = z.infer<typeof inquiryFormSchema>;
 export type QuickFormValues = z.infer<typeof quickFormSchema>;
+
+export interface InquiryItem {
+    id: number;
+    title: string;
+    description: string;
+    startingPrice: number;
+    img: string;
+    link: string;
+    category: "product" | "service" | "repair";
+    quantity: number;
+}
