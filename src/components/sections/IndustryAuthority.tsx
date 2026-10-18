@@ -12,7 +12,7 @@ interface CompanyAttribute {
 
 export default function Industryauthority() {
 
-    const t = useTranslations("industryauthority");
+    const t = useTranslations("home.industryAuthority");
 
     const companyAttributes: CompanyAttribute[] = [
         {

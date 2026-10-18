@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import QuickInquiryForm from "@/features/inquiries/components/quick-inquiry-form";
 
 export default function Herosection() {
-    const t = useTranslations("HeroSection");
+    const t = useTranslations("home.heroSection");
     return (
         <>
             {/* <section className="HeroSection relative bg-[radial-gradient(at_2%_10%,#0c1a18_0%,#31655e_25%,#0c1a18_50%,#31655e_75%,#0c1a18_100%)] h-fit lg:max-h-[90vh] text-brand-neutral "> */}

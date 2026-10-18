@@ -8,7 +8,7 @@ import QuickInquiryForm from "@/features/inquiries/components/quick-inquiry-form
 
 export default function Questions() {
 
-    const t = useTranslations("questions");
+    const t = useTranslations("home.questions");
 
     const items = [
         {

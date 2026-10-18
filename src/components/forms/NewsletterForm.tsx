@@ -38,7 +38,7 @@ function useNewsletterFormLogic() {
 
 export default function NewsletterForm() {
 
-    const t = useTranslations("footer.newsletterform");
+    const t = useTranslations("footer.newsletterForm");
 
     const { form, handleSubmit } = useNewsletterFormLogic();
 

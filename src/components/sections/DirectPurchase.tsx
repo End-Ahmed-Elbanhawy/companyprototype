@@ -1,44 +1,53 @@
 import Link from "next/link";
-import ProductCard, { products } from "../Cards/ProductCard";
+import ProductCard from "../Cards/ProductCard";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
+import { InquiryItem } from "@/features/inquiries/schema";
 
 export default function Directpurchase() {
 
-    const t = useTranslations("directpurchase");
+    const t = useTranslations("home.directPurchase");
 
-    const ProductData: products[] = [
+    const ItemsData: InquiryItem[] = [
         {
             id: 1,
-            title: t("products.product1.title"),
-            description: t("products.product1.description"),
-            StartingPrice: 12500,
+            title: "Heavy-Duty Sliding Door",
+            description: "Structural integrity for maximum width access",
+            startingPrice: 12500,
             img: "/images/product-card-placeholder-1.png",
-            link: ""
+            link: "",
+            category: "product",
+            quantity: 0,
         },
         {
             id: 2,
-            title: t("products.product2.title"),
-            description: t("products.product2.description"),
-            StartingPrice: 8900,
+            title: "High-Speed Roll-Up Door",
+            description: "High-speed operation for critical flow control",
+            startingPrice: 8900,
             img: "/images/product-card-placeholder-2.png",
-            link: ""
+            link: "",
+            category: "product",
+            quantity: 0,
         },
         {
             id: 3,
-            title: t("products.product3.title"),
-            description: t("products.product3.description"),
-            StartingPrice: 15200,
+            title: "Industrial Sectional Door",
+            description: "Thermal efficiency with heavy-duty construction",
+            startingPrice: 15200,
             img: "/images/product-card-placeholder-3.png",
-            link: ""
+            link: "",
+            category: "product",
+            quantity: 0,
         },
         {
             id: 4,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            StartingPrice: 18400,
+            title: "Crash-Proof Warehouse Door",
+            description: "Maximum protection for high-risk areas",
+            startingPrice: 18400,
             img: "/images/product-card-placeholder-4.png",
-            link: ""
+            link: "",
+            category: "product",
+            quantity: 0,
         }
     ];
 
@@ -52,9 +61,9 @@ export default function Directpurchase() {
                 </div>
                 <div className="flex flex-col gap-10 content">
                     <div className="grid justify-between grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12 md:px-4 lg:px-6">
-                        {ProductData.map((product, index) => {
+                        {ItemsData.map((item) => {
                             return (
-                                <ProductCard key={index} props={product} />
+                                <ProductCard key={item.id} item={item} />
                             );
                         })}
                     </div>

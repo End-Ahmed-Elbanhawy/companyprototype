@@ -12,7 +12,7 @@ import { useQuickInquiryForm } from "../hooks/use-quick-inquiry-form";
 
 export default function QuickInquiryForm() {
 
-    const t = useTranslations("InquiryForm");
+    const t = useTranslations("inquiryForm");
 
     const { form, handleSubmit } = useQuickInquiryForm();
 

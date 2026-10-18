@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle } from "../ui/card";
+
 export interface ProjectData {
     id: number;
     title: string;
