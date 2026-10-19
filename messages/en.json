@@ -8,7 +8,7 @@
             "Safety": "Safety",
             "Contact": "Contact"
         },
-        "buttonLabel": "Emergency Repair"
+        "emergencyButtonLabel": "Emergency Repair"
     },
     "inquiryForm": {
         "title": "Request For Quote",
@@ -62,6 +62,9 @@
             "error": "Something went wrong. Please try again."
         },
         "buttonLabel": "Submit Request"
+    },
+    "productCard": {
+        "buttonLabel": "Add to Inquiry cart"
     },
     "home": {
         "heroSection": {
@@ -194,6 +197,20 @@
                     "sheetLabel": "Dispatch Technician"
                 }
             }
+        }
+    },
+    "directPurchasePage": {
+        "header": {
+            "tag": "Enterprise Solutions",
+            "title": "Direct Purchase: Complete Industrial Door Systems"
+        },
+        "productCard": {
+            "buttonLabel": "Configure & Add"
+        },
+        "proceedButton": "Proceed to Inquiry Cart",
+        "cart": {
+            "emptyCart": "The cart is empty",
+            "clearCartButtonLabel": "Clear cart"
         }
     },
     "footer": {

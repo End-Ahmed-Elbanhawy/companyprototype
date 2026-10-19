@@ -1,141 +1,183 @@
+"use client";
+
 import ProductCard from "@/components/Cards/ProductCard";
-// import Directpurchase from "@/components/sections/DirectPurchase";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useInventory } from "@/features/inquiries/cart-slice";
+import CartItemRow from "@/features/inquiries/components/cart-item-row";
 import { InquiryItem } from "@/features/inquiries/schema";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+
+const itemsData: InquiryItem[] = [
+    {
+        id: 1,
+        title: "Heavy-Duty Sliding Door",
+        description: "Structural integrity for maximum width access",
+        startingPrice: 12500,
+        img: "/images/product-card-placeholder-1.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 2,
+        title: "High-Speed Roll-Up Door",
+        description: "High-speed operation for critical flow control",
+        startingPrice: 8900,
+        img: "/images/product-card-placeholder-2.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 3,
+        title: "Industrial Sectional Door",
+        description: "Thermal efficiency with heavy-duty construction",
+        startingPrice: 15200,
+        img: "/images/product-card-placeholder-3.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 4,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 5,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 6,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 7,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 8,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 9,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 10,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 11,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 12,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 13,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 14,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 15,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    },
+    {
+        id: 16,
+        title: "Crash-Proof Warehouse Door",
+        description: "Maximum protection for high-risk areas",
+        startingPrice: 18400,
+        img: "/images/product-card-placeholder-4.png",
+        link: "",
+        category: "product",
+        quantity: 0,
+    }
+];
 
 export default function SolutionPage() {
 
+    const cartItems = useInventory((state) => state.cart);
 
-    // add a redux store to hold the Cart items. So they are sent to the cart page.
+    const clearCart = useInventory((state) => state.clearCart);
 
-
-
-    const t = useTranslations("directpurchase");
-
-    const itemsData: InquiryItem[] = [
-        {
-            id: 1,
-            title: t("products.product1.title"),
-            description: t("products.product1.description"),
-            startingPrice: 12500,
-            img: "/images/product-card-placeholder-1.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 2,
-            title: t("products.product2.title"),
-            description: t("products.product2.description"),
-            startingPrice: 8900,
-            img: "/images/product-card-placeholder-2.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 3,
-            title: t("products.product3.title"),
-            description: t("products.product3.description"),
-            startingPrice: 15200,
-            img: "/images/product-card-placeholder-3.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 4,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 5,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 6,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 7,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 8,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 9,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 10,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 11,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        },
-        {
-            id: 12,
-            title: t("products.product4.title"),
-            description: t("products.product4.description"),
-            startingPrice: 18400,
-            img: "/images/product-card-placeholder-4.png",
-            link: "",
-            category: "product",
-            quantity: 0,
-        }
-    ];
+    const t = useTranslations("directPurchasePage");
 
     return (
         <section className="Directpurchase bg-brand-tertiary">
@@ -147,17 +189,44 @@ export default function SolutionPage() {
                 </div>
                 <div className="flex flex-col gap-10 content">
                     <div className="grid justify-between grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12 md:px-4 lg:px-6">
-                        {itemsData.map((item) => {
+                        {itemsData.filter(item => item.id <= 16).map((item) => {
                             return (
                                 <ProductCard key={item.id} item={item} />
                             );
                         })}
                     </div>
-                    <Button asChild className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1">
-                        <Link href={"/products"}>
-                            {t("shopButton")}
-                        </Link>
-                    </Button>
+                    {/* This will be linked to the cart-inquiry-form.tsx */}
+                    <div className="flex justify-end">
+                        <Button
+                            className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+                        >
+                            {t("proceedButton")}
+                        </Button>
+                        {/* <Sheet>
+                            <SheetTrigger asChild>
+                                <Button
+                                    className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+                                >
+                                    {t("proceedButton")}
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent className="flex flex-col justify-center w-full h-full px-8 py-10 bg-white border-none rounded-sm shadow-2xl outline-none text-brand-secondary lg:max-w-lg sm:py-12 sm:px-10">
+                                {cartItems.length > 0 ?
+                                    cartItems.map((item) => (
+                                        <CartItemRow key={item.id} item={item} />
+                                    )) : t("cart.emptyCart")}
+
+                                <Button
+                                    className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+                                    onClick={() => {
+                                        clearCart()
+                                    }}
+                                >
+                                    {t("cart.clearCartButtonLabel")}
+                                </Button>
+                            </SheetContent>
+                        </Sheet> */}
+                    </div>
                 </div>
             </div>
         </section>
