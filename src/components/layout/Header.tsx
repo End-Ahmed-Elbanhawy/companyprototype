@@ -9,6 +9,8 @@ import { usePathname } from "next/navigation";
 // import LogoSvg from "../ui/LogoSvg";
 import TopHeader from "./TopHeader";
 import { useTranslations } from "next-intl";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import QuickInquiryForm from "@/features/inquiries/components/quick-inquiry-form";
 
 export default function Header() {
 
@@ -66,7 +68,7 @@ export default function Header() {
                         </Link>
                     )}
                 </div>
-                <div className="flex items-center gap-2 Dialog">
+                <div className="flex items-center gap-2">
                     {/* <div className="block search">
                         <Dialog>
                             <DialogTrigger>
@@ -83,9 +85,18 @@ export default function Header() {
                             </DialogContent>
                         </Dialog>
                     </div> */}
-                    <Button className="hidden uppercase transition-all duration-200 ease-in-out px-6 text-sm py-5 bg-brand-primary text-brand-tertiary hover:bg-brand-primary hover:brightness-90 hover:-translate-y-0.5 tracking-wider font-bold roundede-sm shadow-lg shadow-cyan-900/30 lg:flex lg:items-center ">
-                        {t("buttonLabel")}
-                    </Button>
+
+                    <Sheet>
+                        <SheetTrigger asChild>
+                            <Button className="hidden uppercase transition-all duration-200 ease-in-out px-6 text-sm py-5 bg-brand-primary text-brand-tertiary hover:bg-brand-primary hover:brightness-90 hover:-translate-y-0.5 tracking-wider font-bold roundede-sm shadow-lg shadow-cyan-900/30 lg:flex lg:items-center ">
+                                {t("emergencyButtonLabel")}
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent className="flex justify-center">
+                            <QuickInquiryForm />
+                        </SheetContent>
+                    </Sheet>
+
 
                     <div className="block NavButton lg:hidden">
                         <DropdownMenu>
