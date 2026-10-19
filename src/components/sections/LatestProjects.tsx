@@ -43,7 +43,7 @@ export default function Latestprojects() {
     ];
 
     return (
-        <section className="py-24 Latestprojects">
+        <section className="py-24">
             <div className="container grid items-center grid-cols-1 gap-16 px-4 mx-auto lg:grid-cols-2 max-w-7xl md:px-10">
                 <div className="flex flex-col gap-8 left">
                     <div className="head">

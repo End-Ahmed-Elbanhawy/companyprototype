@@ -1,13 +1,16 @@
+"use client";
+
 import { InquiryItem } from "@/features/inquiries/schema";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
-// import { Button } from "../ui/button";
-// import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-// import { useTranslations } from "next-intl";
-// import HeroForm from "@/features/inquiries/components/quick-inquiry-form";
+import { useInventory } from "@/features/inquiries/cart-slice";
+import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
 
 export default function ProductCard({ item }: { item: InquiryItem }) {
 
-  // const t = useTranslations("home.directPurchase");
+  const t = useTranslations("productCard");
+
+  const addItem = useInventory((state) => state.addItem);
 
   return (
     <Card className="w-full h-full max-w-3xl p-5 transition-colors duration-200 ease-in-out border border-transparent rounded-sm shadow-md hover:border-brand-primary">
@@ -25,18 +28,14 @@ export default function ProductCard({ item }: { item: InquiryItem }) {
             {item.description}
           </div>
         </CardDescription>
-
-        {/* This will be linked to the cart-inquiry-form.tsx */}
-        {/* <Sheet>
-          <SheetTrigger asChild>
-            <Button className="w-full text-sm font-bold tracking-wider uppercase transition-transform duration-200 ease-in-out rounded-sm text-brand-tertiary bg-brand-primary py-7 hover:bg-brand-primary hover:-translate-y-1 hover:brightness-90">
-              {t("productCard.buttonLabel")}
-            </Button>
-          </SheetTrigger>
-          <SheetContent className="flex justify-centerw-full h-full px-8 py-10 bg-white border-none rounded-lg shadow-2xl outline-none text-brand-secondary lg:max-w-lg sm:py-12 sm:px-10">
-            <HeroForm />
-          </SheetContent>
-        </Sheet> */}
+        <Button
+          className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm bg-brand-primary text-brand-tertiary px-10 py-5 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+          onClick={() => addItem(item)}
+        >
+          {/* Add to Inquiry cart */}
+          {t("buttonLabel")}
+        </Button>
+        
       </CardHeader>
     </Card>
   );

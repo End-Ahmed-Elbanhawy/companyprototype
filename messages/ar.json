@@ -1,5 +1,5 @@
 {
-    "Header": {
+    "header": {
         "nav": {
             "Home": "الرئيسية",
             "Solutions": "حلول",
@@ -8,9 +8,9 @@
             "Safety": "السلامه",
             "Contact": "تواصل معنا"
         },
-        "buttonLabel": "إصلاح طارئ"
+        "emergencyButtonLabel": "إصلاح طارئ"
     },
-    "InquiryForm": {
+    "inquiryForm": {
         "title": "طلب عرض سعر",
         "normalFields": {
             "fullName": {
@@ -63,13 +63,16 @@
         },
         "buttonLabel": "تقديم الطلب"
     },
-    "Home": {
-        "HeroSection": {
+    "productCard": {
+        "buttonLabel": "Add to Inquiry cart"
+    },
+    "home": {
+        "heroSection": {
             "tag": "معتمد في السلامة الصناعية",
             "title": "هندسة الأبواب الأوتوماتيكية للصناعات الثقيلة",
             "description": "أنظمة دخول هيكلية عالية الأداء مصممة للمتانة والتشغيل المستمر والسلامة التي لا هوادة فيها في البيئات القاسية."
         },
-        "directpurchase": {
+        "directPurchase": {
             "header": {
                 "tag": "حلول المؤسسات",
                 "title": "الشراء المباشر: أنظمة أبواب صناعية متكاملة"
@@ -79,7 +82,7 @@
             },
             "shopButton": "تسوق الكل"
         },
-        "industryauthority": {
+        "industryAuthority": {
             "header": {
                 "tag": "مرجعية الصناعة",
                 "title": "هندسة البنية التحتية الحيوية",
@@ -105,7 +108,7 @@
                 "text2": "من الخبرة"
             }
         },
-        "technicalgrid": {
+        "technicalGrid": {
             "header": {
                 "tag": "المواصفات",
                 "title": "الشبكة الفنية",
@@ -130,7 +133,7 @@
                 }
             }
         },
-        "latestprojects": {
+        "latestProjects": {
             "header": {
                 "tag": "أداء مُثبت",
                 "title": "أحدث المشاريع",
@@ -196,6 +199,20 @@
             }
         }
     },
+    "directPurchasePage": {
+        "header": {
+            "tag": "حلول المؤسسات",
+            "title": "الشراء المباشر: أنظمة أبواب صناعية متكاملة"
+        },
+        "productCard": {
+            "buttonLabel": "تهيئة وإضافة"
+        },
+        "proceedButton": "Proceed to Inquiry Cart",
+        "cart": {
+            "emptyCart": "The cart is empty",
+            "clearCartButtonLabel": "Clear cart"
+        }
+    },
     "footer": {
         "description": "هندسة حلول الأبواب الأوتوماتيكية للصناعات الثقيلة. موثوقية مطلقة، متانة هيكلية، وسلامة لا مساومة عليها.",
         "footerLinks": {
@@ -231,7 +248,7 @@
                 }
             }
         },
-        "newsletterform": {
+        "newsletterForm": {
             "title": "التحديثات الفنية",
             "description": "اشترك للحصول على الموجزات الهندسية وتحديثات بروتوكولات السلامة.",
             "emailAddress": {
@@ -242,7 +259,7 @@
         },
         "bottomSection": {
             "copyright": "© جميع الحقوق محفوظة إنترناشونال إي أيه إس (International EAS) 2026 .",
-            "author": "أحمد خضر by",
+            "author": "أحمد البنهاورى by",
             "tagLine": "هندسة مستقبل أنظمة الدخول."
         }
     }
