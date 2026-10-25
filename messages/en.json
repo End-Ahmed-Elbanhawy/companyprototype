@@ -21,6 +21,14 @@
                     "too_big": "Full name must not exceed 50 characters."
                 }
             },
+            "companyName": {
+                "label": "Company Name",
+                "placeholder": "Enter company name",
+                "errors": {
+                    "too_small": "Company name must be at least 2 characters.",
+                    "too_big": "Company name must not exceed 50 characters."
+                }
+            },
             "phoneNumber": {
                 "label": "Phone Number",
                 "placeholder": "01-xxx-xxx-xxxx",
@@ -210,7 +218,8 @@
         "proceedButton": "Proceed to Inquiry Cart",
         "cart": {
             "emptyCart": "The cart is empty",
-            "clearCartButtonLabel": "Clear cart"
+            "clearCartButtonLabel": "Clear cart",
+            "contactButtonLabel": "Contact us"
         }
     },
     "footer": {
