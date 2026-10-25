@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { quickFormSchema, QuickFormValues } from "../schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { processQuickInquiry } from "../inquiry-actions";
+import { processQuickInquiry } from "../actions/process-quick-inquiry";
 
 export function useQuickInquiryForm() {
 

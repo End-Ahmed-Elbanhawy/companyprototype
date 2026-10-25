@@ -29,13 +29,12 @@ export default function ProductCard({ item }: { item: InquiryItem }) {
           </div>
         </CardDescription>
         <Button
-          className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm bg-brand-primary text-brand-tertiary px-10 py-5 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+          className="self-center px-10 py-5 text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm bg-brand-primary text-brand-tertiary hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
           onClick={() => addItem(item)}
         >
           {/* Add to Inquiry cart */}
           {t("buttonLabel")}
         </Button>
-        
       </CardHeader>
     </Card>
   );
