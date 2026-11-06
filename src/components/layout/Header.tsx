@@ -137,7 +137,7 @@ export default function Header() {
                                     {navLinks.map((link) =>
                                         <DropdownMenuItem asChild key={link.name} className="py-10 text-xl font-medium uppercase transition-colors duration-200 ease-in-out pe-15! bg-brand-secondary md:pe-20! focus:bg-brand-secondary">
                                             <Link href={link.path} className={`focus:text-brand-primary transition-all duration-200 ease-in-out
-                                                        ${pathname === link.path ? " text-brand-primary" : "text-brand-tertiary"}`}>
+                                                 ${pathname === link.path ? " text-brand-primary" : "text-brand-tertiary"}`}>
                                                 {link.name}
                                             </Link>
                                         </DropdownMenuItem>
