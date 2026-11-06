@@ -2,7 +2,7 @@
 
 import { Menu, Search } from "lucide-react";
 import { Button } from "../ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
+// import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
 import Link from "next/link";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { usePathname } from "next/navigation";
@@ -110,16 +110,14 @@ export default function Header() {
                                 className="w-full! mt-2!">
                                 <DropdownMenuSeparator />
                                 <DropdownMenuGroup>
-                                    {
-                                        navLinks.map((link) =>
-                                            <DropdownMenuItem asChild key={link.name} className="py-10 text-xl font-medium uppercase transition-colors duration-200 ease-in-out pe-15! bg-brand-secondary md:pe-20! focus:bg-brand-secondary">
-                                                <Link href={link.path} className={`focus:text-brand-primary transition-all duration-200 ease-in-out
+                                    {navLinks.map((link) =>
+                                        <DropdownMenuItem asChild key={link.name} className="py-10 text-xl font-medium uppercase transition-colors duration-200 ease-in-out pe-15! bg-brand-secondary md:pe-20! focus:bg-brand-secondary">
+                                            <Link href={link.path} className={`focus:text-brand-primary transition-all duration-200 ease-in-out
                                                         ${pathName === link.path ? " text-brand-primary" : "text-brand-tertiary"}`}>
-                                                    {link.name}
-                                                </Link>
-                                            </DropdownMenuItem>
-                                        )
-                                    }
+                                                {link.name}
+                                            </Link>
+                                        </DropdownMenuItem>
+                                    )}
                                 </DropdownMenuGroup>
                             </DropdownMenuContent>
                         </DropdownMenu>

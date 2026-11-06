@@ -208,7 +208,6 @@ export default function SolutionPage() {
                         <SheetContent
                             className="w-full h-full px-8 bg-white border-none rounded-sm shadow-2xl outline-none py-15 text-brand-secondary lg:max-w-xl sm:py-3 sm:px-2"
                         >
-
                             <div className="flex flex-col h-full">
                                 <div
                                     className="border-b "
@@ -232,7 +231,6 @@ export default function SolutionPage() {
                                 <div
                                     className="flex items-center justify-between"
                                 >
-
                                     <Sheet>
                                         <SheetTrigger asChild>
                                             <Button
