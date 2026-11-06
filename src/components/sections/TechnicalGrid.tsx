@@ -34,7 +34,7 @@ export default function Technicalgrid() {
     ];
 
     return (
-        <section className="Technicalgrid bg-brand-tertiary">
+        <section className="bg-brand-tertiary">
             <div className="container px-4 py-24 mx-auto max-w-7xl md:px-10">
                 <div className="flex flex-col items-center mb-16 head">
                     <span className="mb-3 text-sm font-black tracking-widest uppercase text-brand-primary">{t("header.tag")}</span>

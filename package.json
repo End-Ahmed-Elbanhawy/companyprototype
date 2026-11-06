@@ -1,5 +1,5 @@
 {
-  "name": "internationaleas",
+  "name": "companyprototype",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,12 @@
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cn": "^0.5.1",
+    "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.20.0",
     "next": "^16.4.3",
     "next-intl": "^4.13.1",

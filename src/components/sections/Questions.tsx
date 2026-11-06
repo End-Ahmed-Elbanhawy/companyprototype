@@ -34,7 +34,7 @@ export default function Questions() {
     ];
 
     return (
-        <section className="py-24 Questions bg-brand-tertiary">
+        <section className="py-24 bg-brand-tertiary">
             <div className="container grid gap-16 px-4 mx-auto max-w-7xl md:px-10 gid-cols-1 lg:grid-cols-3">
                 <div className="left lg:col-span-2">
                     <h2 className="mb-10 text-4xl font-black uppercase md:text-5xl text-brand-secondary">

@@ -33,7 +33,7 @@ export default function Industryauthority() {
     ];
 
     return (
-        <section className="Industryauthority">
+        <section>
             <div className="container grid items-center grid-cols-1 gap-16 px-4 py-24 mx-auto lg:grid-cols-2 max-w-7xl md:px-10">
                 <div className="flex flex-col gap-6 left lg:pr-8">
                     <span className="text-sm font-black tracking-widest uppercase text-brand-primary">{t("header.tag")}</span>
