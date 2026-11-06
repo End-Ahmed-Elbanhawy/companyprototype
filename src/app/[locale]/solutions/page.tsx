@@ -2,7 +2,7 @@ export default function SolutionsPage() {
     return (
         <section className="Directpurchase bg-brand-tertiary">
             <div className="container flex flex-col w-full gap-10 px-4 pt-24 mx-auto max-w-7xl md:my-10">
-                <div className="flex flex-col items-center gap-5 font-black uppercase HeaderContent">
+                {/* <div className="flex flex-col items-center gap-5 font-black uppercase HeaderContent">
                     <span className="text-sm tracking-widest text-brand-primary">{t("header.tag")}</span>
                     <h2 className="text-4xl text-center text-brand-secondary md:text-5xl">{t("header.title")}</h2>
                     <div className="mx-auto border-b-4 BottomBorder w-25 border-brand-primary"></div>
@@ -15,7 +15,6 @@ export default function SolutionsPage() {
                             );
                         })}
                     </div>
-                    {/* This will be linked to the cart-inquiry-form.tsx */}
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
@@ -74,7 +73,7 @@ export default function SolutionsPage() {
                             </div>
                         </SheetContent>
                     </Sheet>
-                </div>
+                </div> */}
             </div>
         </section>
     );
