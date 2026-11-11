@@ -13,7 +13,7 @@ export async function getItemBySlug(productSlug: string) {
 
     const { data: item, error } = await supabase
         .from("items")
-        .select("id, starting_price, img, title_en, title_ar, description_en, description_ar, product_type, slug", { count: 'exact' })
+        .select("id, starting_price, img, title_en, title_ar, description_en, description_ar, product_type, slug, gallery")
         .eq("slug", productSlug)
         .single();
 

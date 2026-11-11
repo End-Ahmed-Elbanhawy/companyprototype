@@ -11,7 +11,7 @@ export async function getItems(category: "product" | "service" | "repair", page:
 
     let supabaseQuery = supabase
         .from("items")
-        .select("id, starting_price, img, title_en, title_ar, description_en, description_ar, product_type, slug", { count: 'exact' })
+        .select("id, starting_price, img, title_en, title_ar, description_en, description_ar, product_type, slug, gallery", { count: 'exact' })
         .eq("category", category);
 
     if (productType) supabaseQuery = supabaseQuery.eq("product_type", productType);

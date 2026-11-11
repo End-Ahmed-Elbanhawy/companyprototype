@@ -11,8 +11,6 @@ export default function ProductCard({ product }: { product: InquiryItem }) {
 
   const t = useTranslations("productCard");
 
-  const addItem = useInventory((state) => state.addItem);
-
   return (
     <Card className="w-full h-full max-w-3xl p-5 transition-colors duration-200 ease-in-out border border-transparent rounded-sm shadow-md hover:border-brand-primary">
       <div className="relative w-full h-48 overflow-hidden bg-gray-200 rounded-md" >

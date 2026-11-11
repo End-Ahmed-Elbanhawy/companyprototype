@@ -34,7 +34,7 @@ async function sendClientReceipt(formData: CartInquiryFormValues, cartItems: Inq
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
                     <h2 style="color: #0056b3;">Quote Request Received</h2>
                     <p>Dear ${formData.fullName},</p>
-                    <p>Thank you for contacting International EAS. We have successfully received the quote request for your selected industrial access systems.</p>
+                    <p>Thank you for contacting our company. We have successfully received the quote request for your selected industrial access systems.</p>
                     <p>Our team is reviewing your requested items and quantities. We will reach out within 24 to 48 hours to provide pricing and discuss installation requirements for ${formData.companyName}.</p>
 
                     <h3 style="margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">Your Requested Items</h3>
@@ -89,7 +89,7 @@ async function sendInternalAllert(formData: CartInquiryFormValues, cartItems: In
                 <thead>
                     <tr style="background-color: #333; color: #fff;">
                         <th style="padding: 10px; border: 1px solid #555;"> ID </th>
-                        <th style="padding: 10px; border: 1px solid #555;"> System Title </th>
+                        <th style="padding: 10px; border: 1px solid #555;"> System Type </th>
                         <th style="padding: 10px; border: 1px solid #555;"> Qty </th>
                     </tr>
                 </thead>

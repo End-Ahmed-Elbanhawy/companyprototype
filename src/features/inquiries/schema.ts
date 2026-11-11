@@ -25,7 +25,8 @@ export const inquiryItemSchema = z.object({
     category: z.enum(["product", "service", "repair"]),
     quantity: z.number().int().positive(),
     productType: z.string().min(1),
-    slug: z.string().min(1)
+    slug: z.string().min(1),
+    gallery: z.array(z.string().min(1)),
 })
 
 export type InquiryItem = z.infer<typeof inquiryItemSchema>;

@@ -1,11 +1,13 @@
 // "use client";
 
 import ProductCard from "@/components/Cards/ProductCard";
-import AppSideSheet from "@/components/shared/AppSideSheet";
+import AppSideSheet from "@/components/shared/FilterSideSheet";
+import CartSideSheet from "@/components/shared/CartSideSheet";
 import CatalogPagination from "@/components/shared/CatalogPagination";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SidebarHeader } from "@/components/ui/sidebar";
+import { useInventory } from "@/features/inquiries/cart-slice";
 // import { Button } from "@/components/ui/button";
 // import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 // import { useInventory } from "@/features/inquiries/cart-slice";
@@ -183,9 +185,7 @@ import { Suspense } from "react";
 
 export default async function ProductPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
 
-    // const cartItems = useInventory((state) => state.cart);
 
-    // const clearCart = useInventory((state) => state.clearCart);
     const t = await getTranslations("directPurchasePage");
 
     const locale = await getLocale();
@@ -196,7 +196,6 @@ export default async function ProductPage({ searchParams }: { searchParams: Prom
 
     const page = Number(resolvedParams.page) || 1;
 
-    // const productType = String(resolvedParams.type) || "";
     const productType = typeof resolvedParams.type === "string" ? resolvedParams.type : "";
 
     const { items: rawItems, totalPages: totalPages, currentPage: currentPage } = await getItems("product", page, productType, 9);
@@ -210,7 +209,8 @@ export default async function ProductPage({ searchParams }: { searchParams: Prom
         img: item.img,
         quantity: 1,
         productType: item.product_type,
-        slug: item.slug
+        slug: item.slug,
+        gallery: item.gallery
     }));
 
 
@@ -224,18 +224,30 @@ export default async function ProductPage({ searchParams }: { searchParams: Prom
                 </div>
                 <div>
                     <div
-                        className="md:px-4 lg:px-6"
+                        className="flex items-center justify-between md:px-4 lg:px-6w"
                     >
                         <Suspense
                             fallback={
                                 <Button
-                                    className="hidden px-6 py-5 lg:flex opacity-50 cursor-not-allowed"
+                                    className="hidden px-6 py-5 opacity-50 cursor-not-allowed lg:flex"
                                 >
                                     Loading Filter...
                                 </Button>}
                         >
                             <AppSideSheet />
                         </Suspense>
+                        {/* <Button
+                            className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+                        >
+                            {t("proceedButton")}
+                        </Button> */}
+                        <CartSideSheet>
+                            <Button
+                                className="text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm bg-brand-primary text-brand-tertiary px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
+                            >
+                                {t("proceedButton")}
+                            </Button>
+                        </CartSideSheet>
                     </div>
                     <div className="grid justify-between grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-12 md:px-4 lg:px-6">
                         {products.map((product) => (
@@ -247,62 +259,6 @@ export default async function ProductPage({ searchParams }: { searchParams: Prom
                     >
                         <CatalogPagination currentPage={currentPage} totalPages={totalPages} />
                     </div>
-                    {/* <Sheet>
-                        <SheetTrigger asChild>
-                            <Button
-                                className="self-center text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm lg:self-end bg-brand-primary text-brand-tertiary me-4 lg:me-6 px-15 py-7 hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
-                            >
-                                {t("proceedButton")}
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent
-                            className="w-full h-full px-8 bg-white border-none rounded-sm shadow-2xl outline-none py-15 text-brand-secondary lg:max-w-xl sm:py-3 sm:px-2"
-                        >
-                            <div className="flex flex-col h-full">
-                                <div
-                                    className="border-b "
-                                >
-                                    <h2
-                                        className="text-2xl font-bold uppercase text-brand-secondary"
-                                    >
-                                        Inquiry Cart
-                                    </h2>
-                                </div>
-                                <div
-                                    className="flex-1 overflow-y-auto"
-                                >
-                                    {cartItems.length > 0 ?
-                                        cartItems.map((item, index) => (
-                                            <CartItemRow key={index} item={item} />
-                                        )) : t("cart.emptyCart")}
-                                </div>
-                                <div
-                                    className="flex items-center justify-between"
-                                >
-                                    <Sheet>
-                                        <SheetTrigger asChild>
-                                            <Button
-                                                className="px-10 py-5 text-sm font-bold uppercase transition-all duration-200 ease-in-out rounded-sm bg-brand-primary text-brand-tertiary hover:bg-brand-primary hover:brightness-90 hover:-translate-y-1"
-                                            >
-                                                {t("cart.contactButtonLabel")}
-                                            </Button>
-                                        </SheetTrigger>
-                                        <SheetContent className="flex justify-center">
-                                            <CartInquiryForm />
-                                        </SheetContent>
-                                    </Sheet>
-                                    <Button
-                                        className="px-10 py-5 text-sm font-bold uppercase transition-all duration-200 ease-in-out bg-red-500 rounded-sm text-brand-tertiary hover:bg-red-500 hover:brightness-90 hover:-translate-y-1"
-                                        onClick={() => {
-                                            clearCart()
-                                        }}
-                                    >
-                                        {t("cart.clearCartButtonLabel")}
-                                    </Button>
-                                </div>
-                            </div>
-                        </SheetContent>
-                    </Sheet> */}
                 </div>
             </div>
         </section>

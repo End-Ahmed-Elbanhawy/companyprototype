@@ -60,7 +60,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 flex flex-col items-center justify-between w-full text-white border-b MainNav bg-brand-secondary">
-            <TopHeader />
+            {/* <TopHeader /> */}
             <div className="container flex items-center justify-between w-full px-4 mx-auto my-1 max-w-7xl md:px-10">
                 <div className="brand">
                     {/* <Link href={"/"} className="flex items-center justify-start w-fit h-fit"> */}
