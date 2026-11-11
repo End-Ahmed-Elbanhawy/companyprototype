@@ -15,6 +15,7 @@ const itemsData: InquiryItem[] = [
         quantity: 1,
         productType: "sliding",
         slug: "heavy-duty-sliding-door",
+        gallery: [],
     },
     {
         id: "2",
@@ -26,6 +27,7 @@ const itemsData: InquiryItem[] = [
         quantity: 1,
         productType: "rolling",
         slug: "high-speed-roll-up-door",
+        gallery: [],
     },
     {
         id: "3",
@@ -37,6 +39,7 @@ const itemsData: InquiryItem[] = [
         quantity: 1,
         productType: "rolling",
         slug: "industail-secional-door",
+        gallery: [],
     },
     {
         id: "4",
@@ -48,6 +51,7 @@ const itemsData: InquiryItem[] = [
         quantity: 1,
         productType: "rolling",
         slug: "crash-proof-warehouse-door",
+        gallery: [],
     }
 ];
 
