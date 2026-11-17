@@ -11,7 +11,7 @@ export default function TopHeader() {
 
     return (
         <div className="flex flex-col w-full bg-black">
-            <div className="container flex items-center justify-between w-full px-4 mx-auto text-xs text-surface-white UtilBar md:px-10 py-2">
+            <div className="container flex items-center justify-between w-full px-4 py-2 mx-auto text-xs text-surface-white UtilBar md:px-10">
                 <div className="flex gap-6 contact-info">
                     <a
                         href="tel:+201220067776"
@@ -30,7 +30,7 @@ export default function TopHeader() {
                         ahmedelbanhawy@codetier.co
                     </a>
                 </div>
-                <div className="flex Utils items-center gap-5">
+                <div className="flex items-center gap-5 Utils">
                     {
                         isArabic ? (
                             <Link href={"/en"}>

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { InquiryItem } from "../schema";
 import { useInventory } from "../cart-slice";
@@ -11,7 +13,6 @@ export default function CartItemRow({ item }: { item: InquiryItem }) {
 
     const t = useTranslations("directPurchasePage");
 
-    const addItem = useInventory((state) => state.addItem);
     const deleteItem = useInventory((state) => state.deleteItem);
     const updateItem = useInventory((state) => state.updateItem);
 
@@ -28,7 +29,12 @@ export default function CartItemRow({ item }: { item: InquiryItem }) {
 
         if (/^\d*$/.test(value)) {
             setLocalQty(value);
+
+            if (value !== "") {
+                updateItem(item, Number(value));
+            }
         }
+
     }
 
     return (
@@ -74,13 +80,18 @@ export default function CartItemRow({ item }: { item: InquiryItem }) {
                             inputMode="numeric"
                             pattern="[0-9]*"
                             value={localQty}
-                            className="flex items-center w-12 text-sm font-bold text-center transition-all duration-200 ease-in-out bg-transparent border-none rounded-sm text-brand-primary hover:border hover:bg-transparent"
+                            className="flex items-center text-sm font-bold text-center transition-all duration-200 ease-in-out bg-transparent border-none rounded-sm min-w-12 text-brand-primary hover:border hover:bg-transparent max-w-20"
                             onChange={(e) => handleQuantityChange(e)}
-                            onBlur={() => updateItem(item, Number(localQty) || 0)}
+                            onBlur={() => {
+                                if (localQty === "" || Number(localQty) < 1) {
+                                    setLocalQty(1);
+                                    updateItem(item, 1);
+                                }
+                            }}
                         />
                         <Button
                             className="flex items-center px-2 py-1 text-sm font-bold transition-all duration-200 ease-in-out bg-transparent rounded-sm text-brand-primary hover:border-brand-primary hover:border hover:bg-transparent"
-                            onClick={() => addItem(item)}
+                            onClick={() => updateItem(item, item.quantity + 1)}
                         >
                             +
                         </Button>
@@ -95,5 +106,5 @@ export default function CartItemRow({ item }: { item: InquiryItem }) {
 
             </div>
         </div>
-    )
-}
+    );
+};

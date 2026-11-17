@@ -2,10 +2,10 @@
     "header": {
         "nav": {
             "Home": "Home",
+            "Products": "Products",
             "Solutions": "Solutions",
             "Services": "Services",
             "Projects": "Projects",
-            "Safety": "Safety",
             "Contact": "Contact"
         },
         "emergencyButtonLabel": "Emergency Repair"
