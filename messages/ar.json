@@ -2,10 +2,10 @@
     "header": {
         "nav": {
             "Home": "الرئيسية",
+            "Products": "المنتجات",
             "Solutions": "حلول",
             "Services": "خدمات",
             "Projects": "مشاريع",
-            "Safety": "السلامه",
             "Contact": "تواصل معنا"
         },
         "emergencyButtonLabel": "إصلاح طارئ"

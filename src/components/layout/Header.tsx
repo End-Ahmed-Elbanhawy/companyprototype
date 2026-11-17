@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 // import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
 import Link from "next/link";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 // import LogoSvg from "../ui/LogoSvg";
 import TopHeader from "./TopHeader";
 import { useTranslations } from "next-intl";
@@ -14,14 +14,31 @@ import QuickInquiryForm from "@/features/inquiries/components/quick-inquiry-form
 
 export default function Header() {
 
-    const pathName = usePathname();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+    const isArabic = pathname.startsWith("/ar");
 
-    const t = useTranslations("header")
+    const t = useTranslations("header");
+
+    const switchLocale = (newLocale: string) => {
+
+        const pathWithoutLocale = pathname.replace(/^\/(ar|en)/, "");
+
+        const newPath = `/${newLocale}${pathWithoutLocale}`;
+
+        const paramsString = searchParams.toString();
+
+        return paramsString ? `${newPath}?${paramsString}` : newPath;
+    }
 
     const navLinks = [
         {
             name: t("nav.Home"),
             path: "/"
+        },
+        {
+            name: t("nav.Products"),
+            path: "/products"
         },
         {
             name: t("nav.Solutions"),
@@ -36,10 +53,6 @@ export default function Header() {
             path: "/projects"
         },
         {
-            name: t("nav.Safety"),
-            path: "/safety"
-        },
-        {
             name: t("nav.Contact"),
             path: "/contact"
         },
@@ -47,7 +60,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 flex flex-col items-center justify-between w-full text-white border-b MainNav bg-brand-secondary">
-            <TopHeader />
+            {/* <TopHeader /> */}
             <div className="container flex items-center justify-between w-full px-4 mx-auto my-1 max-w-7xl md:px-10">
                 <div className="brand">
                     {/* <Link href={"/"} className="flex items-center justify-start w-fit h-fit"> */}
@@ -63,7 +76,7 @@ export default function Header() {
                 <div className="hidden nav bg-brand-secondary lg:flex lg:gap-2 ">
                     {navLinks.map((link) =>
                         <Link key={link.name} href={link.path} className={`uppercase hover:text-brand-primary transition-all duration-200 ease-in-out px-2.5 py-1.5 text-md font-medium 
-                                ${pathName.startsWith("/" + link.path) ? "text-brand-primary" : "text-brand-tertiary"}`}>
+                                ${pathname.startsWith("/" + link.path) ? "text-brand-primary" : "text-brand-tertiary"}`}>
                             {link.name}
                         </Link>
                     )}
@@ -85,7 +98,18 @@ export default function Header() {
                             </DialogContent>
                         </Dialog>
                     </div> */}
-
+                    <div className="flex items-center gap-5 Utils">
+                        {
+                            isArabic ? (
+                                <Link href={switchLocale("en")}>
+                                    English
+                                </Link>
+                            ) : (
+                                <Link href={switchLocale("ar")}>
+                                    عربي
+                                </Link>)
+                        }
+                    </div>
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button className="hidden uppercase transition-all duration-200 ease-in-out px-6 text-sm py-5 bg-brand-primary text-brand-tertiary hover:bg-brand-primary hover:brightness-90 hover:-translate-y-0.5 tracking-wider font-bold roundede-sm shadow-lg shadow-cyan-900/30 lg:flex lg:items-center ">
@@ -113,7 +137,7 @@ export default function Header() {
                                     {navLinks.map((link) =>
                                         <DropdownMenuItem asChild key={link.name} className="py-10 text-xl font-medium uppercase transition-colors duration-200 ease-in-out pe-15! bg-brand-secondary md:pe-20! focus:bg-brand-secondary">
                                             <Link href={link.path} className={`focus:text-brand-primary transition-all duration-200 ease-in-out
-                                                        ${pathName === link.path ? " text-brand-primary" : "text-brand-tertiary"}`}>
+                                                 ${pathname === link.path ? " text-brand-primary" : "text-brand-tertiary"}`}>
                                                 {link.name}
                                             </Link>
                                         </DropdownMenuItem>

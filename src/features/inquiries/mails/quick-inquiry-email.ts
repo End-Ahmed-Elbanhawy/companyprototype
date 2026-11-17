@@ -21,7 +21,7 @@ async function sendClientReceipt(formData: QuickFormValues) {
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
                     <h2 style="color: #0056b3;">Quote Request Received</h2>
                     <p>Dear ${formData.fullName},</p>
-                    <p>Thank you for reaching out to International EAS. We have received your inquiry regarding our <strong>${formData.systemRequirements}</strong> systems.</p>
+                    <p>Thank you for reaching out to our company. We have received your inquiry regarding our <strong>${formData.systemRequirements}</strong> systems.</p>
                     <p>Our engineering and sales team is currently reviewing your request. You can expect a personalized response or a follow-up call within 24 to 48 hours to discuss your facility's specific needs.</p>
     
                     <div style="background-color: #f8f9fa; padding: 15px; margin-top: 20px; border-left: 4px solid #0056b3;">
@@ -32,7 +32,7 @@ async function sendClientReceipt(formData: QuickFormValues) {
                         <p><strong>System of Interest:</strong> ${formData.systemRequirements}</p>
                     </div>
     
-                    <p style="margin-top: 30px;">Best regards,<br><strong>The International EAS Team</strong></p>
+                    <p style="margin-top: 30px;">Best regards,<br><strong>The Company Team</strong></p>
                 </div>
             `
     });
@@ -73,35 +73,9 @@ async function sendInternalAlert(formData: QuickFormValues) {
     });
 };
 
-
 export async function sendQuickInquiryEmail(formData: QuickFormValues) {
     return Promise.all([
         sendClientReceipt(formData),
         sendInternalAlert(formData)
     ])
 }
-
-// export async function sendQuickInquiryEmail(formData: QuickFormValues) {
-
-//     const recipients = [formData.emailAddress, env.EMAIL_USER];
-
-//     return transporter.sendMail({
-//         from: env.EMAIL_USER,
-//         to: recipients,
-//         subject: "Quick Inquiry",
-//         text: `
-//                   Name: ${formData.fullName}
-//                   Email: ${formData.emailAddress}
-//                   Phone: ${formData.phoneNumber}
-//                   Message: ${formData.systemRequirements}
-//             `,
-//         html: `
-//                   <h1>Quick Inquiry</h1>
-//                   <p>Name: ${formData.fullName}</p>
-//                   <p>Email: ${formData.emailAddress}</p>
-//                   <p>Phone: ${formData.phoneNumber}</p>
-//                   <p>Message: ${formData.systemRequirements}</p>
-//             `
-//     });
-// };
-

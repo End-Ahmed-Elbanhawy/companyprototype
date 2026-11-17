@@ -1,189 +1,8 @@
-"use client";
-
-import ProductCard from "@/components/Cards/ProductCard";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useInventory } from "@/features/inquiries/cart-slice";
-import CartInquiryForm from "@/features/inquiries/components/cart-inquiry-form";
-import CartItemRow from "@/features/inquiries/components/cart-item-row";
-import { InquiryItem } from "@/features/inquiries/schema";
-import { useTranslations } from "next-intl";
-
-const itemsData: InquiryItem[] = [
-    {
-        id: 1,
-        title: "Heavy-Duty Sliding Door",
-        description: "Structural integrity for maximum width access",
-        startingPrice: 12500,
-        img: "/images/product-card-placeholder-1.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 2,
-        title: "High-Speed Roll-Up Door",
-        description: "High-speed operation for critical flow control",
-        startingPrice: 8900,
-        img: "/images/product-card-placeholder-2.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 3,
-        title: "Industrial Sectional Door",
-        description: "Thermal efficiency with heavy-duty construction",
-        startingPrice: 15200,
-        img: "/images/product-card-placeholder-3.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 4,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 5,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 6,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 7,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 8,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 9,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 10,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 11,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 12,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 13,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 14,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 15,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    },
-    {
-        id: 16,
-        title: "Crash-Proof Warehouse Door",
-        description: "Maximum protection for high-risk areas",
-        startingPrice: 18400,
-        img: "/images/product-card-placeholder-4.png",
-        link: "",
-        category: "product",
-        quantity: 1,
-    }
-];
-
-export default function SolutionPage() {
-
-    const cartItems = useInventory((state) => state.cart);
-
-    const clearCart = useInventory((state) => state.clearCart);
-
-    const t = useTranslations("directPurchasePage");
-
+export default function SolutionsPage() {
     return (
         <section className="Directpurchase bg-brand-tertiary">
             <div className="container flex flex-col w-full gap-10 px-4 pt-24 mx-auto max-w-7xl md:my-10">
-                <div className="flex flex-col items-center gap-5 font-black uppercase HeaderContent">
+                {/* <div className="flex flex-col items-center gap-5 font-black uppercase HeaderContent">
                     <span className="text-sm tracking-widest text-brand-primary">{t("header.tag")}</span>
                     <h2 className="text-4xl text-center text-brand-secondary md:text-5xl">{t("header.title")}</h2>
                     <div className="mx-auto border-b-4 BottomBorder w-25 border-brand-primary"></div>
@@ -196,7 +15,6 @@ export default function SolutionPage() {
                             );
                         })}
                     </div>
-                    {/* This will be linked to the cart-inquiry-form.tsx */}
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button
@@ -255,8 +73,8 @@ export default function SolutionPage() {
                             </div>
                         </SheetContent>
                     </Sheet>
-                </div>
+                </div> */}
             </div>
         </section>
     );
-};
+}
